@@ -10,24 +10,38 @@ def subtract_numbers(a, b):
 def divide_numbers(a, b):
     return a // b
 
-result = divide_numbers(20, 5)
-print(result)
+def exponent(a, b):
+    return a ** b
 
+def main():
+    while True:
+        print("=== My Calculator ===")
+        print("1. Addition")
+        print("2. Subtraction")
+        print("3. Multiplication")
+        print("4. Division")
+        print("5. Exponential")
+        
+        choice = input("What operation do you want to perform: ")
 
-username = input("What is your name?")
-def say_hello(username):
-    return f"Hello {username}"
+        a = int(input("Enter first number: "))
+        b = int(input("Enter second number: "))
 
+        if choice == "1":
+            print("Result:", addition(a, b))
+        elif choice == "2":
+            print("Result:", subtract_numbers(a, b))
+        elif choice == "3":
+            print("Result:", mul_numbers(a, b))
+        elif choice == "4":
+            print("Result:", divide_numbers(a, b))
+        elif choice == "5":
+            print("Result:", exponent(a, b))
+        else:
+            print("invalid input")
 
-response = say_hello(username)
-print(response)
-
-
-
-answer = addition(202020, 303030)
-print(answer)
-
-
+if __name__  == "__main__":
+    main()
 
 
 
